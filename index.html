@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onscroll="onScroll()">
+  <body onscroll="onScroll()" class="menu-expanded">
     <nav id="navigation" class="">
       <div class="wrapper">
         <a class="logo" href="#">
@@ -78,24 +78,29 @@
 
           <ul class="social-links">
             <li>
-              <a href="#"
+              <a href="#" target="_blank"
                 ><img src="assets/instagram.svg" alt="Logo instagram"
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" target="_blank"
                 ><img src="assets/facebook.svg" alt="Logo facebook"
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" target="_blank"
                 ><img src="assets/youtube.svg" alt="Logo youtube"
               /></a>
             </li>
           </ul>
         </div>
 
-        <button class="open-menu">
+        <button
+          class="open-menu"
+          onclick="openMenu()"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
           <svg
             width="40"
             height="40"
@@ -126,7 +131,12 @@
             />
           </svg>
         </button>
-        <button class="close-menu">
+        <button
+          class="close-menu"
+          onclick="closeMenu()"
+          aria-label="Fechar menu"
+          aria-expanded="true"
+        >
           <svg
             width="40"
             height="40"
