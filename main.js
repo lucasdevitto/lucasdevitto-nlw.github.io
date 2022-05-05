@@ -1,7 +1,21 @@
+window.addEventListener("scroll", onScroll);
+onScroll();
+
 function onScroll() {
+  showNavOnScroll();
+  showBackToTopButtonOnScroll();
+}
+
+function showNavOnScroll() {
   scrollY > 0
     ? navigation.classList.add("scroll")
     : navigation.classList.remove("scroll");
+}
+
+function showBackToTopButtonOnScroll() {
+  scrollY > 500
+    ? backToTopButton.classList.add("show")
+    : backToTopButton.classList.remove("show");
 }
 
 function openMenu() {
